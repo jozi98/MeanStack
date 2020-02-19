@@ -19,13 +19,6 @@ var adminRouter = express.Router();
 adminRouter.get('/', function(req, res) {
  res.send('I am the dashboard!'); });
 // users page (http://localhost:PORT/admin/users)
-adminRouter.get('/users', function(req, res) {
- res.send('I show all the users!'); });
-// posts page (http://localhost:PORT/admin/posts)
-adminRouter.get('/posts', function(req, res) {
- res.send('I show all the posts!'); });
-// apply the routes to our application
-app.use('/admin', adminRouter);
 
 ///////////////////////////////////////////////////////////////////
 // route middleware that will happen on every request
@@ -35,6 +28,16 @@ app.use('/admin', adminRouter);
  // continue doing what we were doing and go to the route
  next(); });
 //////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+adminRouter.get('/users', function(req, res) {
+ res.send('I show all the users!'); });
+// posts page (http://localhost:PORT/admin/posts)
+adminRouter.get('/posts', function(req, res) {
+ res.send('I show all the posts!'); });
+// apply the routes to our application
+app.use('/admin', adminRouter);
+
+
 ///////////////////////////////////////////////////////////////////
 });
 // start the server
