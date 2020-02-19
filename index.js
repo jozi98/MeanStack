@@ -9,6 +9,7 @@ http.createServer(function(request,response){
 
   response.end('Hello World\n');
 
-}).listen(PORT); // This is saying that the port will be listened on the port given from Heroku
+  console.log(PORT);
 
-console.log('Server running at http://1270.0.0.1:8080');
+
+}).listen(PORT); // This is saying that the port will be listened on the port given from Heroku
