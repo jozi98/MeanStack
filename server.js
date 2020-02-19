@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8080;
 var port = PORT;
 // send our index.html file to the user for the home page
 app.get('/', function(req, res) {
- res.sendFile('index.html');
+ res.sendFile(__dirname+'/index.html');
 });
 // start the server
 app.listen(PORT);
