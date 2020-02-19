@@ -8,7 +8,7 @@ http.createServer(function(request,response){
 
   response.writeHead(200,{'Content-Type':'text/html','Access-Control-Allow-Origin','*'})
 
-  var readStream = fs.createReadStream('index.html');
+  var readStream = fs.createReadStream('MeanStack/index.html');
 
   readStream.pipe(response);
 
