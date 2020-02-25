@@ -26,7 +26,7 @@ adminRouter.get('/', function(req, res) {
 // route middleware that will happen on every request
  adminRouter.use(function(req, res, next) {
  // log each request to the console
- console.log(req.method, req.url , "hello");
+// console.log(req.method, req.url , "hello");
  // continue doing what we were doing and go to the route
  next(); });
 //////////////////////////////////////////////////////////////////
@@ -45,5 +45,5 @@ app.use('/admin', adminRouter);
 });
 // start the server
 app.listen(PORT);
-console.log('Express Server running at http://127.0.0.1:'+PORT);
+//console.log('Express Server running at http://127.0.0.1:'+PORT);
 ///////////////////////////////////////////////////////////////////
