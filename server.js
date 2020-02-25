@@ -7,6 +7,8 @@ const PORT = process.env.PORT || 8080;
 var port = PORT;
 // send our index.html file to the user for the home page
 app.get('/', function(req, res) {
+  // This loads the index.html once the default domain is called on.
+  // Its essentially mapping things
  res.sendFile(__dirname+'/index.html');
 
 
@@ -29,6 +31,7 @@ adminRouter.get('/', function(req, res) {
  next(); });
 //////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
+// posts page (http://localhost:PORT/admin/users)
 adminRouter.get('/users', function(req, res) {
  res.send('I show all the users!'); });
 // posts page (http://localhost:PORT/admin/posts)
