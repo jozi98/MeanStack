@@ -26,7 +26,7 @@ adminRouter.get('/', function(req, res) {
 // route middleware that will happen on every request
  adminRouter.use(function(req, res, next) {
  // log each request to the console
- console.log(req.method, req.url);
+ console.log(req.method, req.url , "hello");
  // continue doing what we were doing and go to the route
  next(); });
 //////////////////////////////////////////////////////////////////
