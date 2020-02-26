@@ -43,6 +43,18 @@ adminRouter.get('/', function(req, res) {
  console.log("Hello")
  // continue doing what we were doing and go to the route
  next(); });
+
+ app.route('/login')
+  // show the form (GET http://localhost:PORT/login)
+  .get(function(req, res) {
+  res.send('this is the login form');
+  })
+  // process the form (POST http://localhost:PORT/login)
+  .post(function(req, res) { console.log('processing');
+  res.send('processing the login form!');
+  });
+
+
 //////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////
 // posts page (http://localhost:PORT/admin/users)
