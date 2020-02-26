@@ -18,6 +18,7 @@ app.get('/', function(req, res) {
 //get an instance of the router
 var adminRouter = express.Router();
 // admin main page. the dashboard (http://localhost:PORT/admin)
+// This is the basic page that is loaded when /admin is called
 adminRouter.get('/', function(req, res) {
  res.send('I am the dashboard!'); });
 // users page (http://localhost:PORT/admin/users)
@@ -27,6 +28,7 @@ adminRouter.get('/', function(req, res) {
  adminRouter.use(function(req, res, next) {
  // log each request to the console
  console.log(req.method, req.url);
+ console.log("Hello")
  // continue doing what we were doing and go to the route
  next(); });
 //////////////////////////////////////////////////////////////////
