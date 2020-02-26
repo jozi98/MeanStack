@@ -54,7 +54,7 @@ adminRouter.get('/posts', function(req, res) {
 
  // route with parameters (http://localhost:PORT/admin/users/:name)
   adminRouter.get('/users/:name', function(req, res) {
-  res.send('hello ' + req.params.name + '!'); });
+  res.send('hello ' + req.name + '!'); });
 
 
 // apply the routes to our application
